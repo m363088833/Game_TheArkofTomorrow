@@ -62,7 +62,7 @@ function 单人游戏(账号, 密码) {
             click(1000, 150);
             sleep(1000);
         }
-        if (ARK.loopfindImages("Template.登录", options[1])) {
+        if (ARK.loopFindImages("Template.登录", options[1])) {
             (function Conformity() {
                 活动与签到();
                 关卡_上次作战();
