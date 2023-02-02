@@ -1,16 +1,6 @@
 {
-    "data": {
-        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/data.json",
-        "path": "/storage/emulated/0/AutoJs/Develop/明日方舟7.0/data/data.json"
-    },
-
-    "image": {
-        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/images.json",
-        "path": "/storage/emulated/0/AutoJs/Develop/明日方舟7.0/data/images.json"
-    },
-    
     "main": {
-        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/data.json",
+        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/main.js",
         "path": "/storage/emulated/0/AutoJs/Develop/明日方舟7.0/main.js"
     }
 }
