@@ -1,6 +1,16 @@
 {
     "main": {
         "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/main.js",
-        "path": "/storage/emulated/0/AutoJs/Develop/明日方舟7.0/main.js"
+        "path": "./main.js"
+    },
+    
+    "__ArkTomorrow__": {
+        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/__ArkTomorrow__.js",
+        "path": "./module_exports/__ArkTomorrow__.js"
+    },
+    
+    "data": {
+        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/data.json",
+        "path": "./data.json"
     }
 }
