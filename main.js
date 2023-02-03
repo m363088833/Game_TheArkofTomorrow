@@ -1,6 +1,6 @@
 定时停止脚本(1000 * 60 * 60);
-console.show(); //悬浮日志(测试完成则立即删除本行代码)
-console.setPosition(0, 200); //(测试完成则立即删除本行代码)
+// console.show(); //悬浮日志(测试完成则立即删除本行代码)
+// console.setPosition(0, 200); //(测试完成则立即删除本行代码)
 
 var ARK = require("./module_exports/__ArkTomorrow__.js");
 ARK.getPermission(true); //获取权限
