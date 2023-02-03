@@ -7,10 +7,5 @@
     "__ArkTomorrow__": {
         "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/__ArkTomorrow__.js",
         "path": "./module_exports/__ArkTomorrow__.js"
-    },
-    
-    "data": {
-        "url": "https://raw.githubusercontent.com/m363088833/Game_TheArkofTomorrow/main/data.json",
-        "path": "./data.json"
     }
 }
