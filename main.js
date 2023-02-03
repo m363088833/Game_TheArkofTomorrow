@@ -1,4 +1,4 @@
-定时停止脚本(1000 * 60 * 60);
+定时停止脚本(1000 * 60 * 60);//最多运行一小时
 console.show(); //悬浮日志(测试完成则立即删除本行代码)
 console.setPosition(0, 200); //(测试完成则立即删除本行代码)
 
@@ -167,7 +167,7 @@ function 找图选项() {
 
 function 定时停止脚本(time) {
     threads.start(function() {
-        toastLog("定时停止脚本_开始");
+        console.log("定时停止脚本_开始");
         sleep(time);
         console.hide();
         toastLog("定时停止脚本_结束");
