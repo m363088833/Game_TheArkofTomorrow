@@ -1,0 +1,57 @@
+{
+  "assets": [],
+  "build": {
+    "build_id": "25FAA338-6",
+    "build_number": 6,
+    "build_time": 1675371506540,
+    "release": false
+  },
+  "encryptLevel": 0,
+  "features": {
+    "activityIntentTasks": false,
+    "nodejs": "auto"
+  },
+  "icon": "images/ic_app_logo.png",
+  "launchConfig": {
+    "displaySplash": true,
+    "hideLogs": false,
+    "splashText": "",
+    "stableMode": false
+  },
+  "main": "更新.js",
+  "name": "明日方舟脚本7.0",
+  "optimization": {
+    "obfuscateComponents": false,
+    "removeAccessibilityService": false,
+    "removeOpenCv": false,
+    "unusedResources": false
+  },
+  "packageName": "com.mingrifangzhou.qje",
+  "permissionConfig": {
+    "requestListOnStartup": [
+      "android.permission.WRITE_EXTERNAL_STORAGE"
+    ]
+  },
+  "plugins": {},
+  "publish": {
+    "category": "",
+    "details": "",
+    "maxAutoJsVersion": 0,
+    "maxProVersion": 0,
+    "minAutoJsVersion": 0,
+    "minProVersion": 0,
+    "minSdkVersion": 0,
+    "permissions": [],
+    "summary": "",
+    "tags": []
+  },
+  "scripts": {},
+  "signingConfig": {
+    "alias": "",
+    "keystore": "",
+    "uuid": ""
+  },
+  "useFeatures": [],
+  "versionCode": 1,
+  "versionName": "23.2.3.1"
+}
