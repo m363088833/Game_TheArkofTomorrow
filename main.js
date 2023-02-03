@@ -1,14 +1,14 @@
 定时停止脚本(1000 * 60 * 60);
-// console.show(); //悬浮日志(测试完成则立即删除本行代码)
-// console.setPosition(0, 200); //(测试完成则立即删除本行代码)
+console.show(); //悬浮日志(测试完成则立即删除本行代码)
+console.setPosition(0, 200); //(测试完成则立即删除本行代码)
 
 var ARK = require("./module_exports/__ArkTomorrow__.js");
 ARK.getPermission(true); //获取权限
+var palyData = JSON.parse(files.read("./zm.json"));
 var options = 找图选项();
-
 var sum = threads.disposable(); //声明一个变量来接受 线程通讯返回的数据
 let Threada = threads.start(function() {
-    let sex = dialogs.select("请选择玩家", palyData().PlayerName);
+    let sex = dialogs.select("请选择玩家", palyData.PlayerName);
     sum.setAndNotify(sex);
 });
 
@@ -18,18 +18,18 @@ Threada.join();
 
 let sex = sum.blockedGet();
 // console.log("sex =" + sex);
-if (sex == palyData().AccountNumber.length) {
+if (sex == palyData.AccountNumber.length) {
     依次登录游戏();
 } else if (sex == -1) { /*点击框外取消选择*/ } else {
-    单人游戏(palyData().AccountNumber[sex], palyData().Password[sex]);
+    单人游戏(palyData.AccountNumber[sex], palyData.Password[sex]);
 }
 
 
 
 //==============================================//
 function 依次登录游戏() {
-    for (let i = 0; i < palyData().AccountNumber.length; i++) {
-        单人游戏(palyData().AccountNumber[i], palyData().Password[i]);
+    for (let i = 0; i < palyData.AccountNumber.length; i++) {
+        单人游戏(palyData.AccountNumber[i], palyData.Password[i]);
     }
 }
 
@@ -145,26 +145,6 @@ function 基建() {
     }
 }
 
-function palyData() {
-    return {
-        "PlayerName": [
-            "丘吉尔宇飞",
-            "myf",
-            "新城",
-            "所有玩家"
-        ],
-        "AccountNumber": [
-            "19962112330",
-            "15375665837",
-            "16251734019"
-        ],
-        "Password": [
-            "19962112330",
-            "15375665837",
-            "jr964707"
-        ]
-    }
-}
 
 function 找图选项() {
     return [{ //找图选项
