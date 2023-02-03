@@ -47,7 +47,7 @@ library.getPermission = function(morePermissions) {
         //截图权限
         if ($images.getScreenCaptureOptions() == null) {
             let Thread = threads.start(function() {
-                let Allow = textMatches(/(允许|立即开始|统一)/).findOne(10 * 1000);
+                let Allow = textMatches(/(允许|立即开始|统一)/).findOne(15 * 1000);
                 if (Allow) {
                     Allow.click();
                 }
@@ -339,11 +339,11 @@ library.closeApp = function(AppName) {
     }
     app.openAppSetting(packageName);
     text(newAppName).waitFor();
-    let is_sure = textMatches(/(.*强.*|.*停.*|.*结.*|.*行.*)/).findOne();
+    let is_sure = textMatches(/(.*强.*|.*停.*|.*结.*|.*行.*)/).findOne(15 * 1000);
     if (is_sure.enabled()) {
-        textMatches(/(.*强.*|.*停.*|.*结.*|.*行.*)/).findOne().click();
+        textMatches(/(.*强.*|.*停.*|.*结.*|.*行.*)/).findOne(15 * 1000).click();
         sleep(500);
-        textMatches(/(.*确.*|.*定.*)/).findOne().click();
+        textMatches(/(.*确.*|.*定.*)/).findOne(15 * 1000).click();
         toastLog(newAppName + "App已被关闭");
     } else {
         toastLog(newAppName + "App不在后台运行");
