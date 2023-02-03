@@ -25,7 +25,6 @@ if (sex == palyData.AccountNumber.length) {
 }
 
 
-
 //==============================================//
 function 依次登录游戏() {
     for (let i = 0; i < palyData.AccountNumber.length; i++) {
