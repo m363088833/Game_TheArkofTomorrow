@@ -1,9 +1,9 @@
 {
   "assets": [],
   "build": {
-    "build_id": "25FAA338-6",
-    "build_number": 6,
-    "build_time": 1675371506540,
+    "build_id": "87CDA154-7",
+    "build_number": 7,
+    "build_time": 1675410962334,
     "release": false
   },
   "encryptLevel": 0,
@@ -15,6 +15,7 @@
   "launchConfig": {
     "displaySplash": true,
     "hideLogs": false,
+    "splashLayoutXml": "Startup Diagram.xml",
     "splashText": "",
     "stableMode": false
   },
@@ -53,5 +54,5 @@
   },
   "useFeatures": [],
   "versionCode": 1,
-  "versionName": "23.2.3.1"
+  "versionName": "23.2.3.2"
 }
