@@ -5,6 +5,29 @@ var library = {};
 /* 
  * @ morePermissions {boolean} true: 开启更多权限 */
 library.getPermission = function(morePermissions) {
+    //开启更多权限
+    if (morePermissions == true) {
+        var Thread3 = threads.start(function() {
+            //关闭内存泄露检测
+            $debug.setMemoryLeakDetectionEnabled(false);
+            console.warn("已关闭内存泄露检测");
+            //忽略电池优化
+            if (!$power_manager.isIgnoringBatteryOptimizations()) {
+                toastLog("请开启忽略电池优化功能");
+                $power_manager.requestIgnoreBatteryOptimizations().waitFor();
+            } else {
+                console.warn("已开启忽略电池优化");
+            }
+            //前台服务
+            if (!$settings.isEnabled("foreground_service")) {
+                toastLog("请开启前台服务");
+                $settings.setEnabled("foreground_service", true).waitFor();; //开启前台服务
+            } else {
+                console.warn('已开启前台服务');
+            }
+        });
+    }
+    
     //无障碍服务
     if (auto.service == null) {
         toastLog("请开启无障碍服务");
@@ -37,28 +60,6 @@ library.getPermission = function(morePermissions) {
         console.warn("已获得截图权限");
     });
     Thread2.join(); //等待join2线程结束
-    //开启更多权限
-    if (morePermissions == true) {
-        var Thread3 = threads.start(function() {
-            //关闭内存泄露检测
-            $debug.setMemoryLeakDetectionEnabled(false);
-            console.warn("已关闭内存泄露检测");
-            //忽略电池优化
-            if (!$power_manager.isIgnoringBatteryOptimizations()) {
-                toastLog("请开启忽略电池优化功能");
-                $power_manager.requestIgnoreBatteryOptimizations().waitFor();
-            } else {
-                console.warn("已开启忽略电池优化");
-            }
-            //前台服务
-            if (!$settings.isEnabled("foreground_service")) {
-                toastLog("请开启前台服务");
-                $settings.setEnabled("foreground_service", true).waitFor();; //开启前台服务
-            } else {
-                console.warn('已开启前台服务');
-            }
-        });
-    }
 }
 
 
