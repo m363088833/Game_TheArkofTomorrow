@@ -16,7 +16,7 @@ library.getPermission = function(morePermissions) {
     //悬浮窗权限
     if (!floaty.checkPermission()) {
         toast("请开启悬浮窗和后台弹出界面权限");
-        floaty.requestPermission();
+        floaty.requestPermission().waitFor();;
     } else {
         console.warn("已获得悬浮窗权限");
     }
@@ -53,7 +53,7 @@ library.getPermission = function(morePermissions) {
             //前台服务
             if (!$settings.isEnabled("foreground_service")) {
                 toastLog("请开启前台服务");
-                $settings.setEnabled("foreground_service", true); //开启前台服务
+                $settings.setEnabled("foreground_service", true).waitFor();; //开启前台服务
             } else {
                 console.warn('已开启前台服务');
             }
